@@ -41,8 +41,22 @@ export default function App() {
         fontFamily: "system-ui, sans-serif",
       }}
     >
-      <h1 style={{ fontSize: 24, marginBottom: 16 }}>Challenge AH — Demo input/output</h1>
+      <h1 style={{ fontSize: 24, marginBottom: 16 }}>Challenge AyHungry</h1>
+      <h2 style={{ fontSize: 20, marginBottom: 12 }}>Consigna</h2>
+     <div style={{ marginBottom: 16 }}>
 
+        <p>¿Puedes descubrir la regla que transforma el input en el output?</p>
+        <p>Input → Output</p>
+        <ul>
+          <li>82 → 68</li>
+          <li>111 → 3</li>
+          <li>999 → 243</li>
+          <li>101 → 2</li>
+          <li>1234 → 30</li>
+        </ul>
+      </div>
+
+      <h2 style={{ fontSize: 20, marginBottom: 12, marginTop:30 }}>Programa con la lógica del ejercicio</h2>
       <label htmlFor="numero" style={{ display: "block", fontWeight: 600, marginBottom: 8 }}>
         Número (entero):
       </label>
@@ -97,6 +111,35 @@ export default function App() {
           {output || "—"}
         </div>
       </section>
+
+      <footer
+        style={{
+          marginTop: "3rem",
+          paddingTop: "1rem",
+          borderTop: "1px solid #e5e7eb",
+          textAlign: "center",
+        }}
+      >
+        <p style={{ marginBottom: "0.5rem", fontWeight: 500 }}>
+          Te invito a ver el código de la resolución en GitHub 😊
+        </p>
+        <a
+          href="https://github.com/ferffloress/challenge-AH"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            display: "inline-block",
+            padding: "10px 16px",
+            borderRadius: "8px",
+            backgroundColor: "#0ea5e9",
+            color: "white",
+            fontWeight: 600,
+            textDecoration: "none",
+          }}
+        >
+          Ver en GitHub
+        </a>
+      </footer>
     </main>
   );
 }
