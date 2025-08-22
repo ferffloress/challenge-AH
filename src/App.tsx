@@ -1,20 +1,13 @@
-// src/App.tsx
 import { useState } from "react";
-
-// ⬇️ Acá definís la lógica de transformación
-function compute(n: number): number {
-  // TODO: reemplazar por tu propia lógica
-  return n;
-}
+import { compute } from "./utils/compute"; // 👈 importa la lógica desde utils
 
 export default function App() {
-  const [raw, setRaw] = useState<string>("");       // lo que escribe el usuario
-  const [output, setOutput] = useState<string>(""); // resultado a mostrar
+  const [raw, setRaw] = useState<string>("");       // input del usuario
+  const [output, setOutput] = useState<string>(""); // resultado
   const [error, setError] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const v = e.target.value.trim();
-    // Solo permitimos vacío o números enteros
     if (/^\d*$/.test(v)) {
       setRaw(v);
       setError("");
@@ -30,7 +23,7 @@ export default function App() {
       return;
     }
     const n = Number(raw);
-    const result = compute(n);
+    const result = compute(n); // 👈 usa la función importada
     setOutput(String(result));
     setError("");
   };
@@ -40,7 +33,14 @@ export default function App() {
   };
 
   return (
-    <main style={{ maxWidth: 520, margin: "3rem auto", fontFamily: "system-ui, sans-serif" }}>
+    <main
+      style={{
+        maxWidth: "520px",
+        width: "90%",
+        margin: "0 auto",
+        fontFamily: "system-ui, sans-serif",
+      }}
+    >
       <h1 style={{ fontSize: 24, marginBottom: 16 }}>Challenge AH — Demo input/output</h1>
 
       <label htmlFor="numero" style={{ display: "block", fontWeight: 600, marginBottom: 8 }}>
