@@ -5,25 +5,20 @@ export function compute(n: number): number {
     .split("")
     .reduce((acc, digit) => acc + (Number(digit) ** 2), 0);
 }
-    
+
 */
 
 
 export function compute(n: number): number {
-  
   const cadenaNumeros = String(n);
-
   let acumulador = 0;
 
   for (let i = 0; i < cadenaNumeros.length; i++) {
-    
-    const caracterNumero = cadenaNumeros[i];
-    
-    const numeroListoParaOperar = Number(caracterNumero);
+     const caracterNumero = cadenaNumeros[i];
+     const numeroListoParaOperar = Number(caracterNumero);
+     const cuadrado = numeroListoParaOperar * numeroListoParaOperar;
 
-    const cuadrado = numeroListoParaOperar * numeroListoParaOperar;
-
-    acumulador = acumulador + cuadrado;
+     acumulador = acumulador + cuadrado;
   }
 
   return acumulador;

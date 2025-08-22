@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { compute } from "./utils/compute"; // 👈 importa la lógica desde utils
+import './App.css';
+
 
 export default function App() {
   const [raw, setRaw] = useState<string>("");       // input del usuario
@@ -38,7 +40,7 @@ export default function App() {
         maxWidth: "520px",
         width: "90%",
         margin: "0 auto",
-        fontFamily: "system-ui, sans-serif",
+        fontFamily: "system-ui, sans-serif"
       }}
     >
       <h1 style={{ fontSize: 24, marginBottom: 16 }}>Challenge AyHungry</h1>
@@ -56,7 +58,7 @@ export default function App() {
         </ul>
       </div>
 
-      <h2 style={{ fontSize: 20, marginBottom: 12, marginTop:30 }}>Programa con la lógica del ejercicio</h2>
+      <h2 style={{ fontSize: 20, marginBottom: 12, marginTop:30 }}>Programa aplicando la lógica del ejercicio</h2>
       <label htmlFor="numero" style={{ display: "block", fontWeight: 600, marginBottom: 8 }}>
         Número (entero):
       </label>
