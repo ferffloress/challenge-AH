@@ -1,11 +1,10 @@
 import { useState } from "react";
-import { compute } from "./utils/compute"; // 👈 importa la lógica desde utils
-import './App.css';
-
+import { compute } from "./utils/compute";
+import "./App.css";
 
 export default function App() {
-  const [raw, setRaw] = useState<string>("");       // input del usuario
-  const [output, setOutput] = useState<string>(""); // resultado
+  const [raw, setRaw] = useState<string>("");
+  const [output, setOutput] = useState<string>("");
   const [error, setError] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +24,7 @@ export default function App() {
       return;
     }
     const n = Number(raw);
-    const result = compute(n); // 👈 usa la función importada
+    const result = compute(n);
     setOutput(String(result));
     setError("");
   };
@@ -40,13 +39,12 @@ export default function App() {
         maxWidth: "520px",
         width: "90%",
         margin: "0 auto",
-        fontFamily: "system-ui, sans-serif"
+        fontFamily: "system-ui, sans-serif",
       }}
     >
       <h1 style={{ fontSize: 24, marginBottom: 16 }}>Challenge AyHungry</h1>
       <h2 style={{ fontSize: 20, marginBottom: 12 }}>Consigna</h2>
-     <div style={{ marginBottom: 16 }}>
-
+      <div style={{ marginBottom: 16 }}>
         <p>¿Puedes descubrir la regla que transforma el input en el output?</p>
         <p>Input → Output</p>
         <ul>
@@ -58,48 +56,62 @@ export default function App() {
         </ul>
       </div>
 
-      <h2 style={{ fontSize: 20, marginBottom: 12, marginTop:30 }}>Programa aplicando la lógica del ejercicio</h2>
-      <label htmlFor="numero" style={{ display: "block", fontWeight: 600, marginBottom: 8 }}>
+      <h2 style={{ fontSize: 20, marginBottom: 12, marginTop: 30 }}>
+        Programa aplicando la lógica del ejercicio
+      </h2>
+      <label
+        htmlFor="numero"
+        style={{ display: "block", fontWeight: 700, marginBottom: 8 }}
+      >
         Número (entero):
       </label>
-      <input
-        id="numero"
-        type="text"
-        inputMode="numeric"
-        placeholder="Ej: 1234"
-        value={raw}
-        onChange={handleChange}
-        onKeyDown={handleKeyDown}
-        style={{
-          width: "100%",
-          padding: "10px 12px",
-          borderRadius: 8,
-          border: "1px solid #cbd5e1",
-          outline: "none",
-        }}
-      />
 
-      <button
-        onClick={handleCompute}
+      <div
         style={{
-          marginTop: 12,
-          padding: "10px 14px",
-          borderRadius: 8,
-          border: "1px solid #0ea5e9",
-          background: "#0ea5e9",
-          color: "white",
-          cursor: "pointer",
+          display: "flex",
+          gap: "0.75rem",
+          alignItems: "center",
+          marginBottom: 12,
         }}
       >
-        Calcular
-      </button>
+        <input
+          id="numero"
+          type="text"
+          inputMode="numeric"
+          placeholder="Ej: 1234"
+          value={raw}
+          onChange={handleChange}
+          onKeyDown={handleKeyDown}
+          style={{
+            flex: 1,
+            padding: "10px 12px",
+            borderRadius: 8,
+            border: "1px solid #cbd5e1",
+            outline: "none",
+            boxSizing: "border-box",
+          }}
+        />
 
-      {error && (
-        <p style={{ color: "#b91c1c", marginTop: 10 }}>{error}</p>
-      )}
+        <button
+          onClick={handleCompute}
+          style={{
+            padding: "10px 14px",
+            borderRadius: 8,
+            border: "1px solid #0ea5e9",
+            background: "#0ea5e9",
+            color: "white",
+            cursor: "pointer",
+            whiteSpace: "nowrap",
+          }}
+        >
+          Calcular
+        </button>
+      </div>
+
+      {error && <p style={{ color: "#b91c1c", marginTop: 10 }}>{error}</p>}
 
       <section style={{ marginTop: 24 }}>
-        <h2 style={{ fontSize: 18, marginBottom: 8 }}>Output</h2>
+        <h2 style={{ fontSize: 16, marginBottom: 8 }}>Output:</h2>
         <div
           style={{
             border: "1px solid #e5e7eb",
@@ -122,25 +134,17 @@ export default function App() {
           textAlign: "center",
         }}
       >
-        <p style={{ marginBottom: "0.5rem", fontWeight: 500 }}>
-          Te invito a ver el código de la resolución en GitHub 😊
+        <p style={{ margin: 0, fontWeight: 500 }}>
+          Te invito a ver el código de la resolución en{" "}
+          <a
+            href="https://github.com/ferffloress/challenge-AH"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>{" "}
+          😊
         </p>
-        <a
-          href="https://github.com/ferffloress/challenge-AH"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            display: "inline-block",
-            padding: "10px 16px",
-            borderRadius: "8px",
-            backgroundColor: "#0ea5e9",
-            color: "white",
-            fontWeight: 600,
-            textDecoration: "none",
-          }}
-        >
-          Ver en GitHub
-        </a>
       </footer>
     </main>
   );

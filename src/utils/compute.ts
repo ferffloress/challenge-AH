@@ -1,4 +1,6 @@
-/* Esta solución muestra el paso a paso de forma clara, recorriendo con un bucle for. Creo que es la más óptima para mostrar el razonamiento detrás de los outputs. Sin embargo, hay otra solución más breve, utilizando reduce:
+/* Esta solución considero que muestra el razonamiento de forma clara, iterando cada dígito con un bucle for 
+y realizando la operación. Creo que es útil para mostrar la lógica detrás de los outputs. Sin embargo, hay 
+otra solución más breve, utilizando "reduce":
 
 export function compute(n: number): number {
   return String(n)
@@ -8,17 +10,16 @@ export function compute(n: number): number {
 
 */
 
-
 export function compute(n: number): number {
   const cadenaNumeros = String(n);
   let acumulador = 0;
 
   for (let i = 0; i < cadenaNumeros.length; i++) {
-     const caracterNumero = cadenaNumeros[i];
-     const numeroListoParaOperar = Number(caracterNumero);
-     const cuadrado = numeroListoParaOperar * numeroListoParaOperar;
+    const caracterNumero = cadenaNumeros[i];
+    const numeroListoParaOperar = Number(caracterNumero);
+    const cuadrado = numeroListoParaOperar * numeroListoParaOperar;
 
-     acumulador = acumulador + cuadrado;
+    acumulador = acumulador + cuadrado;
   }
 
   return acumulador;
