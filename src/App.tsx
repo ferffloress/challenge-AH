@@ -8,9 +8,9 @@ export default function App() {
   const [error, setError] = useState<string>("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const v = e.target.value.trim();
-    if (/^\d*$/.test(v)) {
-      setRaw(v);
+    const value = e.target.value.trim();
+    if (/^\d*$/.test(value)) {
+      setRaw(value);
       setError("");
     } else {
       setError("Ingresá solo números enteros (0-9).");
@@ -23,8 +23,8 @@ export default function App() {
       setError("Primero ingresá un número.");
       return;
     }
-    const n = Number(raw);
-    const result = compute(n);
+    const number = Number(raw);
+    const result = compute(number);
     setOutput(String(result));
     setError("");
   };
@@ -108,7 +108,9 @@ export default function App() {
         </button>
       </div>
 
-      {error && <p style={{ color: "#b91c1c", marginTop: 10 }}>{error}</p>}
+      <div style={{ minHeight: "25px", marginTop: 10 }}>
+  {error && <p style={{ color: "#b91c1c", margin: 0 }}>{error}</p>}
+</div>
 
       <section style={{ marginTop: 24 }}>
         <h2 style={{ fontSize: 16, marginBottom: 8 }}>Output:</h2>

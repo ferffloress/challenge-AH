@@ -4,6 +4,30 @@ Este proyecto fue creado con **Vite**, utilizando **React.js** y **TypeScript** 
 
 ---
 
+## ⚡ Cómo levantar el proyecto  
+
+Debés tener instalado **Node.js** en una de estas versiones:  
+- `20.19+`  
+- `22.12+`  
+
+Instala las dependencias:
+- `npm install`
+
+Levanta el entorno de desarrollo:
+- `npm run dev`
+
+Abre el navegador en la URL que aparece en consola (por defecto suele ser http://localhost:5173).
+
+---
+
+## 📂 Lógica del ejercicio
+
+La lógica de la consigna se encuentra en el archivo:
+
+- `src/utils/compute.ts`
+
+---
+
 ## 🤖 ¿Cómo usé inteligencia artificial en este proyecto?  
 
 - 🏗️ Para crear la base inicial (input, output, botón y títulos).  
@@ -19,10 +43,3 @@ Este proyecto fue creado con **Vite**, utilizando **React.js** y **TypeScript** 
 
 - 🚫 Evito **copiar y pegar** bloques de código completos.  
 - ✅ Prefiero **escribir y adaptar** yo misma cada parte para mantener el control total sobre lo que voy construyendo.  
-
----
-
-## 📂 Ubicación del README  
-
-👉 Este archivo (`README.md`) debe ir en la **carpeta raíz del proyecto**, junto a `package.json`.  
-Así se mostrará automáticamente en plataformas como GitHub.  

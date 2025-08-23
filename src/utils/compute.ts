@@ -11,16 +11,17 @@ export function compute(n: number): number {
 */
 
 export function compute(n: number): number {
-  const cadenaNumeros = String(n);
-  let acumulador = 0;
+  const numberString = String(n);
+  let accumulator = 0;
 
-  for (let i = 0; i < cadenaNumeros.length; i++) {
-    const caracterNumero = cadenaNumeros[i];
-    const numeroListoParaOperar = Number(caracterNumero);
-    const cuadrado = numeroListoParaOperar * numeroListoParaOperar;
+  for (let i = 0; i < numberString.length; i++) {
+    const char = numberString[i];
+    const digit = Number(char);
+    const squared = digit * digit;
 
-    acumulador = acumulador + cuadrado;
+    accumulator = accumulator + squared;
   }
 
-  return acumulador;
+  return accumulator;
 }
+
