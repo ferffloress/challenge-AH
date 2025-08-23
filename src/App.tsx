@@ -42,7 +42,7 @@ export default function App() {
         fontFamily: "system-ui, sans-serif",
       }}
     >
-      <h1 style={{ fontSize: 24, marginBottom: 16 }}>Challenge AyHungry</h1>
+      <h1 style={{ fontSize: 24, marginBottom: 16, marginTop: 0 }}>Challenge AyHungry</h1>
       <h2 style={{ fontSize: 20, marginBottom: 12 }}>Consigna</h2>
       <div style={{ marginBottom: 16 }}>
         <p>¿Puedes descubrir la regla que transforma el input en el output?</p>
@@ -109,8 +109,8 @@ export default function App() {
       </div>
 
       <div style={{ minHeight: "25px", marginTop: 10 }}>
-  {error && <p style={{ color: "#b91c1c", margin: 0 }}>{error}</p>}
-</div>
+        {error && <p style={{ color: "#b91c1c", margin: 0 }}>{error}</p>}
+      </div>
 
       <section style={{ marginTop: 24 }}>
         <h2 style={{ fontSize: 16, marginBottom: 8 }}>Output:</h2>
