@@ -9,7 +9,7 @@ Este proyecto fue creado con **Vite**, utilizando **React.js** y **TypeScript** 
 - 🏗️ Para crear la base inicial (input, output, botón y títulos).  
 - 🎨 Para acelerar cambios de estilo y experimentar con el diseño.  
 - 📚 Para recordar sintaxis y buenas prácticas de React. 
-✍️ Para mejorar la **legibilidad y presentación** de este README. 
+- ✍️ Para mejorar la **legibilidad y presentación** de este README. 
 
 > 🧠 En cuanto al **algoritmo del ejercicio**, preferí no dejarme condicionar por las propuestas de la IA, aunque me resulta útil ver diferentes opciones.  
 
