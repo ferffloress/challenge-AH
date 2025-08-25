@@ -43,3 +43,9 @@ La lógica de la consigna se encuentra en el archivo:
 
 - 🚫 Evito **copiar y pegar** bloques de código completos.  
 - ✅ Prefiero **escribir y adaptar** yo misma cada parte para mantener el control total sobre lo que voy construyendo.  
+
+---
+
+## 🖥️ Acceso en la web
+
+- https://challenge-ah-chi.vercel.app/
